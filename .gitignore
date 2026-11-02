@@ -1,0 +1,21 @@
+*.coverage
+
+# ignore large video files
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# ignore large npz files
+*.npz
+# Proprietary hardware/model files (not public)
+we2-hardware-files/
+*.urdf
+*.stl
+*.usd
+*.usda
+ActuatorDynamics/load_joint_parameters.m
+__pycache__/
+*.egg-info/
+# Third-party gait dataset (Camargo et al. 2021), not redistributed
+humanMotion/AB08/

@@ -1,0 +1,89 @@
+\ProvidesPackage{etbe}[2024/01/07 ET-BE thesis formatting package]
+
+% Required: A4 paper, 2.5cm margins on all sides
+\usepackage[a4paper,margin=2.5cm]{geometry}
+
+% Font encoding
+\usepackage[T1]{fontenc}
+
+% Graphics and math
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,filecolor=blue}
+
+% Captions
+\usepackage{caption}
+\captionsetup{font=small}
+
+% Page style
+\pagestyle{plain}
+
+% Bibliography
+\bibliographystyle{plainurl}
+
+% Table of contents formatting
+\usepackage{tocloft}
+
+% More packages
+\usepackage{svg}
+\usepackage{float}
+
+% Watermark with logos
+\usepackage{watermark}
+\thiswatermark{%
+  \put(-105,-680){\includegraphics[width=7.5cm]{utwentetitle-back-11.pdf}}%
+  \put(-60,-755){\includegraphics[width=6cm]{utlogo.pdf}}}
+
+% Date formatting
+\renewcommand{\today}{%
+  \ifcase\month\or January\or February\or March\or April\or May\or June\or July\or August\or September\or October\or November\or December\fi,~\number\year
+}
+
+% Cover page commands
+\newcommand*{\coverauthor}[1]{\gdef\@coverauthor{#1}}
+\newcommand*{\supervisor}[1]{\gdef\@supervisor{#1}}
+\newcommand*{\covertitle}[1]{\gdef\@covertitle{#1}}
+\newcommand*{\doctype}[1]{\gdef\@doctype{#1}}
+\newcommand*{\graduationcommittee}[1]{\gdef\@graduationcommittee{#1}}
+
+% Cover page (ET-BE formatted)
+\newcommand*{\makecoverpage}{%
+  \thispagestyle{empty}
+  \hspace{3.5cm}\parbox[t]{10.8cm}{%
+    \LARGE MSc Robotics\\
+    \@doctype
+  }
+  \vfill
+  \vfill
+  \hspace{3.5cm}\parbox[t]{10.8cm}{%
+    \begin{flushleft}\huge\bfseries\@covertitle\end{flushleft}
+  }
+  \vfill
+  \hspace{3.5cm}\parbox[t]{10.8cm}{\LARGE\@coverauthor}
+  \vfill
+  \hspace{3.5cm}\parbox[t]{10.8cm}{Supervisor: \@supervisor}
+  \ifx\@graduationcommittee\undefined\else
+  \vfill
+  \hspace{3.5cm}\parbox[t]{10.8cm}{Graduation Committee: \@graduationcommittee}
+  \fi
+  \vfill
+  \hspace{3.5cm}\parbox[t]{10.8cm}{\today}
+  \vfill
+  \hspace{3.5cm}\parbox[t]{10.8cm}{%
+    Engineering Technology -- Biomechanical Engineering\\
+    Faculty of Engineering Technology\\
+    University of Twente
+  }%
+  \newpage%
+}
+
+% Keywords environment
+\newenvironment{keywords}{%
+  \vspace{1em}\noindent\textbf{Keywords:}\,\ignorespaces
+}{%
+  \par
+}

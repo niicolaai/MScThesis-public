@@ -1,0 +1,14 @@
+/myenv/
+/imgs/
+/00_saves/
+/play_data_plots/
+/sub_rewards_plots/
+/hardware_data_plots/
+/rewards/
+/motion_log_plots/
+/extractFrames/
+
+*.csv
+!/dist_tests/*.csv
+!/dist_tests/PD/*.csv
+!/dist_tests/Torque/*.csv

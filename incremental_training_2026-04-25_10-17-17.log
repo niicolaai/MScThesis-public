@@ -1,0 +1,523 @@
+
+╔════════════════════════════════════════════════════════════╗
+║     ExoRL Incremental Training - Starting Pipeline         ║
+╚════════════════════════════════════════════════════════════╝
+
+Configuration:
+  Isaac Lab Path: /workspace/isaaclab
+  Task: Template-Exorl-Direct-v0
+  Num Envs: 10000
+  Logs Directory: /exoWE2/exoRL/source/exoRL/logs/rsl_rl/exorl_ppo_experiment
+
+Starting Stage 1 (No augmentation)...
+
+==========================================
+Stage 1 Training
+==========================================
+Sensor Noise: False
+Configuration Randomization: False
+Disturbance Forces: False
+Max Iterations: 500
+Previous Run Name: 'None (Fresh start)'
+==========================================
+
+[INFO] Running command: /workspace/isaaclab/isaaclab.sh -p /exoWE2/exoRL/scripts/rsl_rl/train.py --task=Template-Exorl-Direct-v0 --headless --log_sub_rewards --num_envs=10000 --max_iterations=500
+
+[3gH    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H    H [INFO] Using python from: /workspace/isaaclab/_isaac_sim/python.sh
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /workspace/isaaclab/apps/isaaclab.python.headless.kit
+[INFO]: Parsing configuration from: exoRL.tasks.direct.exorl.exorl_env_cfg:ExorlEnvCfg
+[INFO]: Parsing configuration from: exoRL.tasks.direct.exorl.agents.rsl_rl_ppo_cfg:PPORunnerCfg
+[INFO] Logging experiment in directory: /exoWE2/exoRL/source/exoRL/logs/rsl_rl/exorl_ppo_experiment
+Exact experiment name requested from command line: 2026-04-25_10-17-23
+[2026-04-25 10:17:23,302][__main__][WARNING] - IO descriptors are only supported for manager based RL environments. No IO descriptors will be exported.
+Loading user config located at: '/isaac-sim/kit/data/Kit/Isaac-Sim/5.1/user.config.json'
+[Info] [carb] Logging to file: /isaac-sim/kit/logs/Kit/Isaac-Sim/5.1/kit_20260425_101717.log
+2026-04-25T10:17:18Z [469ms] [Warning] [omni.usd_config.extension] Enable omni.materialx.libs extension to use MaterialX
+2026-04-25T10:17:18Z [986ms] [Warning] [carb] Acquiring non optional plugin interface which is not listed as dependency: [omni::physx::IPhysxBenchmarks v1.0] (plugin: <default plugin>), by client: omni.physics.physx.plugin. Add it to CARB_PLUGIN_IMPL_DEPS() macro of a client.
+2026-04-25T10:17:18Z [994ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 580.126.09    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA RTX A6000                 | Yes: 0 |     | 49140   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2230      | f1d64513.. |
+|     |                                  |        |     |            | 1         |            |
+|=============================================================================================|
+| OS: 24.04.2 LTS (Noble Numbat) ubuntu, Version: 24.04.2, Kernel: 6.8.0-106-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12101004 (1.21.1.4)
+| Processor: AMD Ryzen Threadripper 7980X 64-Cores
+| Cores: 64 | Logical Cores: 128
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 128256 | Free Memory: 118580
+| Total Page/Swap (MB): 1951 | Free Page/Swap: 0
+|---------------------------------------------------------------------------------------------|
+2026-04-25T10:17:21Z [4,004ms] [Warning] [gpu.foundation.plugin] CPU performance profile is set to powersave. This profile sets the CPU to the lowest frequency reducing performance.
+2026-04-25T10:17:21Z [4,013ms] [Warning] [gpu.foundation.plugin] IOMMU is enabled.
+2026-04-25T10:17:30Z [12,963ms] [Warning] [omni.physx.plugin] The rigid body at /World/envs/env_0/Robot/WE2_3D/BasePlate/LHI_Body has a possibly invalid inertia tensor of {1.0, 1.0, 1.0} and a negative mass, small sphere approximated inertia was used. Either specify correct values in the mass properties, or add collider(s) to any shape(s) that you wish to automatically compute mass properties for.
+2026-04-25T10:17:30Z [12,963ms] [Warning] [omni.physx.plugin] The rigid body at /World/envs/env_0/Robot/WE2_3D/BasePlate/LHO_Body has a possibly invalid inertia tensor of {1.0, 1.0, 1.0} and a negative mass, small sphere approximated inertia was used. Either specify correct values in the mass properties, or add collider(s) to any shape(s) that you wish to automatically compute mass properties for.
+2026-04-25T10:17:30Z [12,963ms] [Warning] [omni.physx.plugin] The rigid body at /World/envs/env_0/Robot/WE2_3D/BasePlate/LTI_Body has a possibly invalid inertia tensor of {1.0, 1.0, 1.0} and a negative mass, small sphere approximated inertia was used. Either specify correct values in the mass properties, or add collider(s) to any shape(s) that you wish to automatically compute mass properties for.
+2026-04-25T10:17:30Z [12,963ms] [Warning] [omni.physx.plugin] The rigid body at /World/envs/env_0/Robot/WE2_3D/BasePlate/LTO_Body has a possibly invalid inertia tensor of {1.0, 1.0, 1.0} and a negative mass, small sphere approximated inertia was used. Either specify correct values in the mass properties, or add collider(s) to any shape(s) that you wish to automatically compute mass properties for.
+[INFO] IsaacLab logging to file: /tmp/isaaclab_2026-04-25_10-17-23.log
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 42
+	Physics step-size     : 0.001
+	Rendering step-size   : 0.01
+	Environment step-size : 0.01
+[INFO]: Time taken for scene creation : 6.873284 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 10000
+	Environment spacing   : 2.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[33m10:17:33 [articulation.py] WARNING: Not all actuators are configured! Total number of actuated joints not equal to number of joints available: 8 != 10.[0m
+[INFO]: Time taken for simulation start : 4.952277 seconds
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++-------------------------------------+
+| Active Event Terms in Mode: 'reset' |
++--------+----------------------------+
+| Index  | Name                       |
++--------+----------------------------+
+|   0    | reset_gravity              |
+|   1    | robot_mass                 |
+|   2    | robot_physics_material     |
++--------+----------------------------+
+
+[INFO]: Completed setting up the environment...
+[DEBUG] Using sensor noise: False
+[DEBUG] Using configuration randomization: False
+[DEBUG] Using disturbance forces: False
+[DEBUG] Using torque control mode: True
+[DEBUG] Using actuator dynamics: False
+
+[DEBUG] ========== REWARD SCALES ==========
+[DEBUG] orientation_penalty_scale: 3.0
+[DEBUG] height_reward_scale: 10.0
+[DEBUG] action_change_penalty_scale_position: 0.05
+[DEBUG] action_change_penalty_scale_torque: 3e-07
+[DEBUG] alive_reward: 0.1
+[DEBUG] early_termination_penalty_scale: 10.0
+[DEBUG] joint_symmetry_penalty_scale: 0.3
+[DEBUG] cbf_angle_reward_scale: 0.001
+[DEBUG] cbf_torque_reward_scale: 0.0004
+[DEBUG] walk_velocity_reward_scale: 0.0
+[DEBUG] spawn_position_reward_scale: 0.0
+[DEBUG] imitation_q_reward_scale: 0.0
+[DEBUG] imitation_dq_reward_scale: 0.0
+[DEBUG] imitation_pelvis_reward_scale: 0.0
+[DEBUG] =====================================
+
+--------------------------------------------------------------------------------
+Resolved observation sets: 
+	 policy :  ['policy']
+	 critic :  ['policy']
+--------------------------------------------------------------------------------
+Actor MLP: MLP(
+  (0): Linear(in_features=23, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=64, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=64, out_features=8, bias=True)
+)
+Critic MLP: MLP(
+  (0): Linear(in_features=23, out_features=128, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=128, out_features=64, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=64, out_features=1, bias=True)
+)
+Observation component 0 at limit: [-0.30637407  0.22265308 -0.16431712 -0.15645339  1.          0.6085585
+ -0.61000603 -0.37044367]
+Observation component 0 at limit: [-0.27988753  0.15564656 -0.22514124 -0.21534121  1.          0.59318596
+ -0.6079413  -0.38877562]
+Observation component 0 at limit: [-0.2503582   0.0799242  -0.27737686 -0.25713968  1.          0.58568215
+ -0.59980416 -0.39062947]
+Observation component 0 at limit: [-0.23101257  0.01284447 -0.32141238 -0.27967626  1.          0.5947963
+ -0.58996606 -0.3783583 ]
+Observation component 0 at limit: [-0.22932202 -0.03975836 -0.36134592 -0.29320428  1.          0.6148596
+ -0.58447856 -0.35830867]
+Observation component 0 at limit: [-0.2310467  -0.08439753 -0.3796375  -0.30085337  1.          0.644131
+ -0.5734166  -0.34605163]
+Observation component 0 at limit: [-0.26014236 -0.01702724  0.50129503  0.11335424  1.          0.70235157
+ -0.3706149  -0.46932873]
+Observation component 0 at limit: [-0.31450257 -0.03054895  0.5469158   0.11062425  1.          0.71354437
+ -0.32943338 -0.41141158]
+Observation component 0 at limit: [-0.3600001  -0.04115579  0.570273    0.09104964  1.          0.7150386
+ -0.3042121  -0.40170497]
+Observation component 0 at limit: [-0.35326812 -0.06161131  0.5749662   0.06790027  1.          0.712857
+ -0.30290273 -0.411031  ]
+Observation component 0 at limit: [-0.35047418 -0.07942122  0.56827295  0.03927518  1.          0.70177925
+ -0.31786653 -0.42350522]
+Observation component 0 at limit: [-0.3481573  -0.10585647  0.5638501   0.01411799  1.          0.6912252
+ -0.3448988  -0.44033083]
+Observation component 0 at limit: [-0.3336961  -0.13844262  0.56411827 -0.00404688  1.          0.68446934
+ -0.37669665 -0.46025872]
+Observation component 0 at limit: [-0.31630754 -0.16920707  0.56696755 -0.02150067  1.          0.6773019
+ -0.4058145  -0.48224086]
+Observation component 0 at limit: [-0.30457288 -0.19723937  0.5724074  -0.04237204  1.          0.66926533
+ -0.43990958 -0.5208489 ]
+Observation component 0 at limit: [-0.29712322 -0.22043934  0.5799006  -0.05954349  1.          0.66540945
+ -0.4777581  -0.5716253 ]
+Observation component 0 at limit: [-0.3002409  -0.23823994  0.5906866  -0.07399052  1.          0.6613223
+ -0.5128577  -0.61      ]
+Observation component 0 at limit: [-0.31675327 -0.25513077  0.6093463  -0.08720736  1.          0.6545279
+ -0.55124485 -0.60710716]
+Observation component 0 at limit: [-0.32468617 -0.2743113   0.6282419  -0.09986696  1.          0.6444654
+ -0.59333    -0.5920618 ]
+Observation component 0 at limit: [-0.32242435 -0.29942644  0.65485823 -0.11122727  1.          0.6369322
+ -0.60980517 -0.5618809 ]
+Observation component 0 at limit: [ 0.109366   -0.32956693  0.5588551   0.08866958  1.          0.65916634
+ -0.39550328 -0.5371207 ]
+Observation component 0 at limit: [ 0.0328224  -0.33316293  0.5932446   0.06921192  1.          0.66564465
+ -0.33415276 -0.54172903]
+Observation component 0 at limit: [-0.04962243 -0.33180207  0.6197613   0.04462467  1.          0.66917527
+ -0.2679056  -0.5406085 ]
+Observation component 0 at limit: [-0.13902487 -0.32253113  0.64060694  0.01687464  1.          0.6707754
+ -0.20462665 -0.53496486]
+################################################################################
+                       [1m Learning iteration 0/500 [0m                       
+
+                       Computation: 69554 steps/s (collection: 18.053s, learning 0.350s)
+             Mean action noise std: 0.75
+          Mean value_function loss: inf
+               Mean surrogate loss: 0.0000
+                 Mean entropy loss: 9.0501
+                       Mean reward: -11180216524177136.00
+               Mean episode length: 41.77
+--------------------------------------------------------------------------------
+                   Total timesteps: 1280000
+                    Iteration time: 18.40s
+                      Time elapsed: 00:00:18
+                               ETA: 02:33:21
+
+Could not find git repository in /workspace/isaaclab/_isaac_sim/kit/python/lib/python3.11/site-packages/rsl_rl/__init__.py. Skipping.
+Could not find git repository in /exoWE2/exoRL/scripts/rsl_rl/train.py. Skipping.
+Observation component 0 at limit: [-0.3578144   0.35942927  0.602361    0.25178778  1.          0.795429
+  0.03380512 -0.4294187 ]
+Observation component 0 at limit: [-0.3548904   0.35989147  0.67315024  0.27643096  1.          0.8275184
+  0.13864613 -0.4983473 ]
+Observation component 0 at limit: [-0.34389618  0.3584035   0.7449751   0.2963247   1.          0.8584426
+  0.25696135 -0.58822894]
+################################################################################
+                       [1m Learning iteration 1/500 [0m                       
+
+                       Computation: 69967 steps/s (collection: 18.027s, learning 0.267s)
+             Mean action noise std: 0.75
+          Mean value_function loss: inf
+               Mean surrogate loss: 0.0000
+                 Mean entropy loss: 9.0501
+                       Mean reward: -25049416107667876.00
+               Mean episode length: 38.87
+--------------------------------------------------------------------------------
+                   Total timesteps: 2560000
+                    Iteration time: 18.29s
+                      Time elapsed: 00:00:36
+                               ETA: 02:32:35
+
+Observation component 0 at limit: [-0.3035066   0.22859153  0.3422178   0.6635414   0.802264    1.
+ -0.13053696 -0.3163534 ]
+Observation component 0 at limit: [-0.3163156   0.1983195   0.33938852  0.6748983   0.80845374  1.
+ -0.11397889 -0.30365694]
+Observation component 0 at limit: [-0.3218132   0.17334658  0.33668134  0.68830067  0.81954473  1.
+ -0.1100499  -0.28846812]
+Observation component 0 at limit: [-0.32313824  0.15525293  0.33697757  0.70464844  0.83613175  1.
+ -0.12034798 -0.2764437 ]
+Observation component 0 at limit: [-0.3271043   0.12437341  0.33476868  0.7216459   0.84804183  1.
+ -0.10995915 -0.24772154]
+Observation component 0 at limit: [-0.3322256   0.07672477  0.3266781   0.7452659   0.85058385  1.
+ -0.06461445 -0.18416382]
+Observation component 0 at limit: [-0.33993232  0.03008324  0.32256073  0.771883    0.84314686  1.
+  0.02262743 -0.12119881]
+Observation component 0 at limit: [-0.3463342  -0.01321704  0.31757128  0.7982688   0.8255902   1.
+  0.13563606 -0.06874172]
+Observation component 0 at limit: [-0.34448835 -0.05701327  0.3018257   0.82844484  0.806153    1.
+  0.2302451   0.00556051]
+Observation component 0 at limit: [-0.3403537  -0.09680598  0.28072056  0.86037105  0.79167545  1.
+  0.29747674  0.08105518]
+Observation component 0 at limit: [-0.33886215 -0.13722977  0.25725994  0.9006397   0.77948976  1.
+  0.36140427  0.16158539]
+Observation component 0 at limit: [-0.3324732  -0.17967786  0.229459    0.95115674  0.76000065  1.
+  0.4528863   0.26325586]
+Observation component 0 at limit: [-0.32198292 -0.21965753  0.19307019  1.          0.7373666   1.
+  0.54265654  0.3698342 ]
+Observation component 0 at limit: [-0.3092803   0.15229186  0.46582818  0.74890566  0.77735716  1.
+ -0.37640736 -0.5072859 ]
+Observation component 0 at limit: [-0.3390898   0.16588888  0.49604315  0.7815238   0.797174    1.
+ -0.30420035 -0.56584686]
+Observation component 0 at limit: [-0.3447397   0.17670573  0.50974935  0.8161145   0.83342475  1.
+ -0.3461608  -0.61      ]
+Observation component 0 at limit: [-0.35029054  0.18048055  0.50367796  0.85546124  0.8653105   1.
+ -0.41707122 -0.61      ]
+Observation component 0 at limit: [-0.36000007  0.19025935  0.4994672   0.88922936  0.89351773  1.
+ -0.47712654 -0.6026544 ]
+Observation component 0 at limit: [-0.35998446  0.20212603  0.5127418   0.9107162   0.9117846   1.
+ -0.49872714 -0.5841099 ]
+Observation component 0 at limit: [-0.35707814  0.20903134  0.5282437   0.93328977  0.9305622   1.
+ -0.5023927  -0.5713253 ]
+Observation component 0 at limit: [-0.3599019   0.21613756  0.54139644  0.9528736   0.94611984  1.
+ -0.4919173  -0.56292737]
+Observation component 0 at limit: [-0.02020152 -0.2741981   0.21275017 -0.26299238  1.         -0.04682127
+ -0.5069849  -0.599674  ]
+Observation component 0 at limit: [-0.03981809 -0.29861155  0.21911673 -0.26951787  1.         -0.04667546
+ -0.4829062  -0.5764436 ]
+Observation component 0 at limit: [-0.06134168 -0.3226974   0.21861835 -0.27935472  1.         -0.04858257
+ -0.45660526 -0.54666597]
+Observation component 0 at limit: [-0.08174285 -0.35044113  0.21533127 -0.28776678  1.         -0.0499987
+ -0.4263772  -0.5141558 ]
+Observation component 0 at limit: [-0.11125644 -0.35944828  0.2081937  -0.29747322  1.         -0.04807362
+ -0.40571204 -0.48885643]
+Observation component 0 at limit: [-0.14661552 -0.36002305  0.19722687 -0.312257    1.         -0.0500016
+ -0.38207683 -0.4700487 ]
+Observation component 0 at limit: [-0.18233544 -0.35864514  0.18342134 -0.32989144  1.         -0.05
+ -0.3625376  -0.45451397]
+Observation component 0 at limit: [-0.21574017 -0.3571025   0.17045076 -0.3473549   1.         -0.05
+ -0.35678914 -0.43220517]
+Observation component 0 at limit: [-0.24659152 -0.35455358  0.16032022 -0.36136222  1.         -0.04527482
+ -0.3527856  -0.41352248]
+Observation component 0 at limit: [-0.27600476 -0.35470766  0.15328643 -0.37393388  1.         -0.04292122
+ -0.3372958  -0.39448965]
+Observation component 0 at limit: [-0.30211696 -0.35581273  0.15330373 -0.37771726  1.         -0.02841243
+ -0.3184855  -0.38338256]
+Observation component 0 at limit: [-0.32702464 -0.34857827  0.15632293 -0.37160733  1.          0.0111633
+ -0.30765003 -0.38905698]
+Observation component 0 at limit: [-0.35225242 -0.33779356  0.15212741 -0.374075    1.          0.03678302
+ -0.31217137 -0.37720615]
+Observation component 0 at limit: [-0.3593253  -0.3350042   0.14526473 -0.37799874  1.          0.05460265
+ -0.32332596 -0.3493902 ]
+Observation component 0 at limit: [-0.36       -0.3344376   0.13869578 -0.37784937  1.          0.07662999
+ -0.32896197 -0.33054593]
+Observation component 0 at limit: [-0.36       -0.32539296  0.13602449 -0.37724224  1.          0.10373446
+ -0.31627598 -0.3090652 ]
+Observation component 0 at limit: [-0.3585122  -0.31619832  0.13933848 -0.37667263  1.          0.14254582
+ -0.28351575 -0.32155806]
+Observation component 0 at limit: [-0.35719573 -0.3183301   0.14655447 -0.37491214  1.          0.18626969
+ -0.2581967  -0.3554512 ]
+################################################################################
+                       [1m Learning iteration 2/500 [0m                       
+
+                       Computation: 69637 steps/s (collection: 18.113s, learning 0.267s)
+             Mean action noise std: 0.75
+          Mean value_function loss: inf
+               Mean surrogate loss: 0.0000
+                 Mean entropy loss: 9.0501
+                       Mean reward: -229956891550596896.00
+               Mean episode length: 38.98
+--------------------------------------------------------------------------------
+                   Total timesteps: 3840000
+                    Iteration time: 18.38s
+                      Time elapsed: 00:00:55
+                               ETA: 02:32:22
+
+Observation component 0 at limit: [-0.17600359  0.28814828 -0.02978267  0.00445908  1.          0.83789754
+ -0.4814487  -0.3738302 ]
+Observation component 0 at limit: [-0.19093883  0.30201072 -0.0416664  -0.00410157  1.          0.8595497
+ -0.4377819  -0.3520634 ]
+Observation component 0 at limit: [-0.3493228   0.28457025 -0.00755218 -0.36325386  1.          0.52726704
+ -0.52057135 -0.5265494 ]
+Observation component 0 at limit: [-0.34806165  0.2938395   0.0383668  -0.3635615   1.          0.56353307
+ -0.49794945 -0.58229333]
+################################################################################
+                       [1m Learning iteration 3/500 [0m                       
+
+                       Computation: 70818 steps/s (collection: 17.807s, learning 0.267s)
+             Mean action noise std: 0.75
+          Mean value_function loss: inf
+               Mean surrogate loss: 0.0000
+                 Mean entropy loss: 9.0501
+                       Mean reward: -96388570037641.36
+               Mean episode length: 39.35
+--------------------------------------------------------------------------------
+                   Total timesteps: 5120000
+                    Iteration time: 18.07s
+                      Time elapsed: 00:01:13
+                               ETA: 02:31:29
+
+Observation component 0 at limit: [-0.09460305 -0.36000007  0.45729613  0.6785748   1.          0.9972756
+ -0.35127762 -0.4328397 ]
+Observation component 0 at limit: [-0.13415621 -0.34811917  0.49503854  0.709525    1.          1.
+ -0.28610158 -0.41760853]
+Observation component 0 at limit: [-0.17479996 -0.34558782  0.53255844  0.73548454  1.          1.
+ -0.21452492 -0.3981335 ]
+Observation component 0 at limit: [-0.2214454  -0.34434456  0.5756242   0.7572705   1.          1.
+ -0.1309879  -0.37631243]
+Observation component 0 at limit: [-0.2690076  -0.3357328   0.62341315  0.7724979   1.          1.
+ -0.04896522 -0.3443575 ]
+Observation component 0 at limit: [-0.31601495 -0.32725453  0.6713115   0.7809345   1.          1.
+  0.04805518 -0.31342387]
+Observation component 0 at limit: [-0.35384843 -0.3201144   0.7177993   0.79291224  1.          1.
+  0.1628529  -0.27839082]
+Observation component 0 at limit: [-0.3573086  -0.32307065  0.7468908   0.8270229   1.          1.
+  0.24733269 -0.23220743]
+Observation component 0 at limit: [-0.34766194 -0.33886096  0.76350665  0.88041675  1.          1.
+  0.31087515 -0.18077748]
+Observation component 0 at limit: [-0.33738053 -0.35253623  0.78186893  0.93286896  1.          1.
+  0.38235527 -0.14537676]
+Observation component 0 at limit: [-0.3306273  -0.36        0.8033317   0.97342616  1.          1.
+  0.43028313 -0.14578123]
+Observation component 0 at limit: [-0.33151022 -0.35508335  0.8288778   1.          1.          1.
+  0.46129036 -0.15207298]
+################################################################################
+                       [1m Learning iteration 4/500 [0m                       
+
+                       Computation: 70898 steps/s (collection: 17.786s, learning 0.268s)
+             Mean action noise std: 0.75
+          Mean value_function loss: inf
+               Mean surrogate loss: 0.0000
+                 Mean entropy loss: 9.0501
+                       Mean reward: -8945038341904539.00
+               Mean episode length: 39.97
+--------------------------------------------------------------------------------
+                   Total timesteps: 6400000
+                    Iteration time: 18.05s
+                      Time elapsed: 00:01:31
+                               ETA: 02:30:47
+
+Observation component 0 at limit: [ 0.10390425 -0.1494535   0.8643509   0.5628355   1.          0.6134627
+ -0.6063276  -0.46693397]
+Observation component 0 at limit: [ 0.11048846 -0.1631526   0.92005795  0.58509725  1.          0.63745874
+ -0.61       -0.49099678]
+Observation component 0 at limit: [ 0.1138105  -0.18185663  0.97635394  0.6044484   1.          0.6623139
+ -0.61       -0.49867254]
+Observation component 0 at limit: [ 0.11652561 -0.20499428  1.          0.6229943   1.          0.6880106
+ -0.61       -0.49533167]
+Observation component 0 at limit: [ 0.12352625 -0.23346736  1.          0.6404269   1.          0.7136049
+ -0.6088427  -0.47770828]
+Observation component 0 at limit: [ 0.13404757 -0.27167618  1.          0.65617955  1.          0.74025863
+ -0.61       -0.45534483]
+Observation component 0 at limit: [ 0.14656048 -0.31558445  1.          0.677922    1.          0.7693012
+ -0.60452735 -0.43285394]
+Observation component 0 at limit: [ 0.15922934 -0.36        1.          0.7081617   1.          0.79507977
+ -0.5883389  -0.39351228]
+Observation component 0 at limit: [ 0.17309864 -0.35974154  1.          0.74400383  1.          0.8160985
+ -0.5738061  -0.3528239 ]
+Observation component 0 at limit: [ 0.19370611 -0.35999864  1.          0.7759654   1.          0.8410031
+ -0.55454123 -0.3393714 ]
+Observation component 0 at limit: [ 0.21517581 -0.36000037  1.          0.8116677   1.          0.8708073
+ -0.533158   -0.32985783]
+Observation component 0 at limit: [ 0.22766595 -0.35933495  1.          0.8479758   1.          0.90003985
+ -0.51777065 -0.3220658 ]
+Observation component 0 at limit: [ 0.23591226 -0.35845724  1.          0.8769283   1.          0.92707
+ -0.509365   -0.3166902 ]
+Observation component 0 at limit: [ 0.24239205 -0.36        1.          0.9019178   1.          0.9519533
+ -0.49539873 -0.31154895]
+Observation component 0 at limit: [ 0.250323   -0.3599986   1.          0.9305853   1.          0.97558534
+ -0.46523055 -0.31069183]
+################################################################################
+                       [1m Learning iteration 5/500 [0m                       
+
+                       Computation: 70905 steps/s (collection: 17.795s, learning 0.257s)
+             Mean action noise std: 0.75
+          Mean value_function loss: inf
+               Mean surrogate loss: 0.0000
+                 Mean entropy loss: 9.0501
+                       Mean reward: -3347251108067851.00
+               Mean episode length: 39.00
+--------------------------------------------------------------------------------
+                   Total timesteps: 7680000
+                    Iteration time: 18.05s
+                      Time elapsed: 00:01:49
+                               ETA: 02:30:13
+
+################################################################################
+                       [1m Learning iteration 6/500 [0m                       
+
+                       Computation: 71054 steps/s (collection: 17.748s, learning 0.267s)
+             Mean action noise std: 0.75
+          Mean value_function loss: inf
+               Mean surrogate loss: 0.0000
+                 Mean entropy loss: 9.0501
+                       Mean reward: -7735824005885.26
+               Mean episode length: 38.75
+--------------------------------------------------------------------------------
+                   Total timesteps: 8960000
+                    Iteration time: 18.01s
+                      Time elapsed: 00:02:07
+                               ETA: 02:29:41
+
+################################################################################
+                       [1m Learning iteration 7/500 [0m                       
+
+                       Computation: 70728 steps/s (collection: 17.829s, learning 0.268s)
+             Mean action noise std: 0.75
+          Mean value_function loss: inf
+               Mean surrogate loss: 0.0000
+                 Mean entropy loss: 9.0501
+                       Mean reward: -4556858964158980.00
+               Mean episode length: 38.63
+--------------------------------------------------------------------------------
+                   Total timesteps: 10240000
+                    Iteration time: 18.10s
+                      Time elapsed: 00:02:25
+                               ETA: 02:29:18
+
+Observation component 0 at limit: [ 0.35392278 -0.30857855  0.8172913   0.33292216  1.          0.6842289
+ -0.49031377 -0.36796653]
+Observation component 0 at limit: [ 0.34203294 -0.29381365  0.8646937   0.3456846   1.          0.7143312
+ -0.47431064 -0.31600413]
+Observation component 0 at limit: [ 0.3290911  -0.27978253  0.9116587   0.35777736  1.          0.732447
+ -0.45635164 -0.23565036]
+Observation component 0 at limit: [ 0.32022974 -0.26323074  0.95885444  0.36769375  1.          0.7424713
+ -0.4323124  -0.14956029]
+Observation component 0 at limit: [ 0.3180038  -0.24673295  1.          0.37453717  1.          0.7582168
+ -0.42065668 -0.09293475]
+Observation component 0 at limit: [ 0.3183955  -0.24041541  1.          0.37457374  1.          0.7796393
+ -0.41867852 -0.05144235]
+Observation component 0 at limit: [ 3.2022187e-01 -2.3546867e-01  1.0000000e+00  3.6846954e-01
+  1.0000000e+00  7.9345602e-01 -4.0998513e-01  2.6681033e-04]
+Observation component 0 at limit: [ 0.32486793 -0.22686143  1.          0.37617597  1.          0.80473155
+ -0.3926451   0.05818646]
+Observation component 0 at limit: [ 0.331429   -0.21697222  1.          0.38590458  1.          0.817402
+ -0.370012    0.10952429]
+Observation component 0 at limit: [ 0.340467   -0.20641866  1.          0.39889485  1.          0.8250801
+ -0.34638014  0.17533118]
+Observation component 0 at limit: [ 0.3472041  -0.19029051  1.          0.41033387  1.          0.8211216
+ -0.33487612  0.2711786 ]
+Observation component 0 at limit: [ 0.35682672 -0.17395249  1.          0.4235516   1.          0.8166294
+ -0.32610446  0.36695093]
+Observation component 0 at limit: [ 0.35977027 -0.16136314  1.          0.4385441   1.          0.8151684
+ -0.3267401   0.45236588]
+################################################################################
+                       [1m Learning iteration 8/500 [0m                       
+
+                       Computation: 70580 steps/s (collection: 17.869s, learning 0.266s)
+             Mean action noise std: 0.75
+          Mean value_function loss: inf
+               Mean surrogate loss: 0.0000
+                 Mean entropy loss: 9.0501
+                       Mean reward: -875056527847064.12
+               Mean episode length: 39.68
+--------------------------------------------------------------------------------
+                   Total timesteps: 11520000
+                    Iteration time: 18.14s
+                      Time elapsed: 00:02:43
+                               ETA: 02:28:58
+
+Observation component 0 at limit: [-0.32849514 -0.10780388 -0.22757219 -0.13686463  0.31379175  1.
+ -0.43081433 -0.0877369 ]
+Observation component 0 at limit: [-0.3600122  -0.07060737 -0.17560494 -0.13333577  0.37402683  1.
+ -0.3645811  -0.04923259]
+Observation component 0 at limit: [-0.35547575 -0.06423452 -0.12663057 -0.12488598  0.43777815  1.
+ -0.291447   -0.0021567 ]
+Observation component 0 at limit: [-0.35860112 -0.05130325 -0.08174203 -0.11335142  0.4887608   1.
+ -0.23062727  0.0714538 ]
+Observation component 0 at limit: [-0.3595235  -0.0463462  -0.04167851 -0.09473515  0.55116755  1.
+ -0.24940221  0.17339757]
+Observation component 0 at limit: [-0.35959923 -0.04525215 -0.00331676 -0.07213914  0.6130009   1.
+ -0.26514518  0.2991411 ]
+Observation component 0 at limit: [-0.36       -0.04265916  0.03409576 -0.04667369  0.6732177   1.
+ -0.28219774  0.41609177]
+Observation component 0 at limit: [-0.36       -0.03760907  0.0716944  -0.01380925  0.73324615  1.
+ -0.30896017  0.53310245]
+Observation component 0 at limit: [-0.3591351  -0.03234861  0.11690807  0.02612706  0.7939897   1.
+ -0.3209951   0.6440384 ]
+Observation component 0 at limit: [-0.35711783 -0.03403438  0.17057712  0.06895548  0.85629827  1.
+ -0.31815663  0.74000007]
+Observation component 0 at limit: [-0.13672733 -0.02707743  0.15038218 -0.06621103  1.          0.49412897
+ -0.57313865 -0.5998959 ]

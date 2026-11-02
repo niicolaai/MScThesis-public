@@ -1,0 +1,1191 @@
+=== Mechanical Parameters for All Joints ===
+             <strong>jm</strong>         <strong>bm</strong>       <strong>k</strong>  
+           <strong>_______</strong>    <strong>______</strong>    <strong>____</strong>
+
+    <strong>LHA</strong>    0.98512    1.9702    1534
+    <strong>LHF</strong>    0.98512    1.9702    1534
+    <strong>LK </strong>    0.55435    1.1087    1534
+    <strong>LA </strong>    0.98512    1.9702    1534
+    <strong>RHA</strong>    0.98512    1.9702    1534
+    <strong>RHF</strong>    0.98512    1.9702    1534
+    <strong>RK </strong>    0.55435    1.1087    1534
+    <strong>RA </strong>    0.98512    1.9702    1534
+
+
+Note: Joints grouped into 2 models:
+  Knee Model (LK, RK):  Same parameters
+  Leg Model (LHA, LHF, LA, RHA, RHF, RA): Same parameters
+
+================================================================================
+Computing SEA Models for 2 Representative Joints
+================================================================================
+
+================================================================================
+Joint: LK (Representative for group)
+================================================================================
+
+Continuous-time Transfer Functions:
+H(s) — Torque transfer (tau_m -> tau_k):
+  <a href="matlab:helpPopup('tf')" style="font-weight:bold">tf</a> with properties:
+
+       Numerator: {[0 0 1534]}
+     Denominator: {[0.5543 1.1087 1534]}
+        Variable: 's'
+         IODelay: 0
+      InputDelay: 0
+     OutputDelay: 0
+       InputName: {''}
+       InputUnit: {''}
+      InputGroup: [1×1 struct]
+      OutputName: {''}
+      OutputUnit: {''}
+     OutputGroup: [1×1 struct]
+           Notes: [0×1 string]
+        UserData: []
+            Name: ''
+              Ts: 0
+        TimeUnit: 'seconds'
+    SamplingGrid: [1×1 struct]
+
+Z(s) — Actuator impedance (-omega_l -> tau_k):
+  <a href="matlab:helpPopup('tf')" style="font-weight:bold">tf</a> with properties:
+
+       Numerator: {[0 850.3710 1.7007e+03]}
+     Denominator: {[0.5543 1.1087 1534]}
+        Variable: 's'
+         IODelay: 0
+      InputDelay: 0
+     OutputDelay: 0
+       InputName: {''}
+       InputUnit: {''}
+      InputGroup: [1×1 struct]
+      OutputName: {''}
+      OutputUnit: {''}
+     OutputGroup: [1×1 struct]
+           Notes: [0×1 string]
+        UserData: []
+            Name: ''
+              Ts: 0
+        TimeUnit: 'seconds'
+    SamplingGrid: [1×1 struct]
+
+Discretized Transfer Functions (Ts = 0.01 s):
+H_d(z) — Torque transfer:
+  <a href="matlab:helpPopup('tf')" style="font-weight:bold">tf</a> with properties:
+
+       Numerator: {[0.0641 0.1282 0.0641]}
+     Denominator: {[1 -1.7250 0.9815]}
+        Variable: 'z'
+         IODelay: 0
+      InputDelay: 0
+     OutputDelay: 0
+       InputName: {''}
+       InputUnit: {''}
+      InputGroup: [1×1 struct]
+      OutputName: {''}
+      OutputUnit: {''}
+     OutputGroup: [1×1 struct]
+           Notes: [0×1 string]
+        UserData: []
+            Name: ''
+              Ts: 0.0100
+        TimeUnit: 'seconds'
+    SamplingGrid: [1×1 struct]
+
+Z_d(z) — Actuator impedance:
+  <a href="matlab:helpPopup('tf')" style="font-weight:bold">tf</a> with properties:
+
+       Numerator: {[7.1783 0.1421 -7.0362]}
+     Denominator: {[1 -1.7250 0.9815]}
+        Variable: 'z'
+         IODelay: 0
+      InputDelay: 0
+     OutputDelay: 0
+       InputName: {''}
+       InputUnit: {''}
+      InputGroup: [1×1 struct]
+      OutputName: {''}
+      OutputUnit: {''}
+     OutputGroup: [1×1 struct]
+           Notes: [0×1 string]
+        UserData: []
+            Name: ''
+              Ts: 0.0100
+        TimeUnit: 'seconds'
+    SamplingGrid: [1×1 struct]
+
+State-Space Representation for H_d(z):
+A =
+    1.7250   -0.9815
+    1.0000         0
+
+B =
+    0.5000
+         0
+
+C =
+    0.4776    0.0024
+
+D =
+    0.0641
+
+State-Space Representation for Z_d(z):
+A =
+    1.7250   -0.9815
+    1.0000         0
+
+B =
+     4
+     0
+
+C =
+    3.1313   -3.5204
+
+D =
+    7.1783
+
+
+================================================================================
+Joint: LHA (Representative for group)
+================================================================================
+
+Continuous-time Transfer Functions:
+H(s) — Torque transfer (tau_m -> tau_k):
+  <a href="matlab:helpPopup('tf')" style="font-weight:bold">tf</a> with properties:
+
+       Numerator: {[0 0 1534]}
+     Denominator: {[0.9851 1.9702 1534]}
+        Variable: 's'
+         IODelay: 0
+      InputDelay: 0
+     OutputDelay: 0
+       InputName: {''}
+       InputUnit: {''}
+      InputGroup: [1×1 struct]
+      OutputName: {''}
+      OutputUnit: {''}
+     OutputGroup: [1×1 struct]
+           Notes: [0×1 string]
+        UserData: []
+            Name: ''
+              Ts: 0
+        TimeUnit: 'seconds'
+    SamplingGrid: [1×1 struct]
+
+Z(s) — Actuator impedance (-omega_l -> tau_k):
+  <a href="matlab:helpPopup('tf')" style="font-weight:bold">tf</a> with properties:
+
+       Numerator: {[0 1.5112e+03 3.0223e+03]}
+     Denominator: {[0.9851 1.9702 1534]}
+        Variable: 's'
+         IODelay: 0
+      InputDelay: 0
+     OutputDelay: 0
+       InputName: {''}
+       InputUnit: {''}
+      InputGroup: [1×1 struct]
+      OutputName: {''}
+      OutputUnit: {''}
+     OutputGroup: [1×1 struct]
+           Notes: [0×1 string]
+        UserData: []
+            Name: ''
+              Ts: 0
+        TimeUnit: 'seconds'
+    SamplingGrid: [1×1 struct]
+
+Discretized Transfer Functions (Ts = 0.01 s):
+H_d(z) — Torque transfer:
+  <a href="matlab:helpPopup('tf')" style="font-weight:bold">tf</a> with properties:
+
+       Numerator: {[0.0371 0.0742 0.0371]}
+     Denominator: {[1 -1.8325 0.9809]}
+        Variable: 'z'
+         IODelay: 0
+      InputDelay: 0
+     OutputDelay: 0
+       InputName: {''}
+       InputUnit: {''}
+      InputGroup: [1×1 struct]
+      OutputName: {''}
+      OutputUnit: {''}
+     OutputGroup: [1×1 struct]
+           Notes: [0×1 string]
+        UserData: []
+            Name: ''
+              Ts: 0.0100
+        TimeUnit: 'seconds'
+    SamplingGrid: [1×1 struct]
+
+Z_d(z) — Actuator impedance:
+  <a href="matlab:helpPopup('tf')" style="font-weight:bold">tf</a> with properties:
+
+       Numerator: {[7.3853 0.1462 -7.2391]}
+     Denominator: {[1 -1.8325 0.9809]}
+        Variable: 'z'
+         IODelay: 0
+      InputDelay: 0
+     OutputDelay: 0
+       InputName: {''}
+       InputUnit: {''}
+      InputGroup: [1×1 struct]
+      OutputName: {''}
+      OutputUnit: {''}
+     OutputGroup: [1×1 struct]
+           Notes: [0×1 string]
+        UserData: []
+            Name: ''
+              Ts: 0.0100
+        TimeUnit: 'seconds'
+    SamplingGrid: [1×1 struct]
+
+State-Space Representation for H_d(z):
+A =
+    1.8325   -0.9809
+    1.0000         0
+
+B =
+    0.5000
+         0
+
+C =
+    0.2845    0.0014
+
+D =
+    0.0371
+
+State-Space Representation for Z_d(z):
+A =
+    1.8325   -0.9809
+    1.0000         0
+
+B =
+     4
+     0
+
+C =
+    3.4199   -3.6209
+
+D =
+    7.3853
+
+
+================================================================================
+Joint Group Mapping:
+================================================================================
+Knee joints (LK, RK) → Use model 'LK'
+Leg joints (LHA, LHF, LA, RHA, RHF, RA) → Use model 'LHA'
+
+================================================================================
+Models saved to: C:\Users\nholt\Documents\UTwente\MScThesis\exoRL\ActuatorDynamics\sea_models.mat
+================================================================================
+=== Mechanical Parameters for All Joints ===
+             <strong>jm</strong>         <strong>bm</strong>       <strong>k</strong>  
+           <strong>_______</strong>    <strong>______</strong>    <strong>____</strong>
+
+    <strong>LHA</strong>    0.98512    1.9702    1534
+    <strong>LHF</strong>    0.98512    1.9702    1534
+    <strong>LK </strong>    0.55435    1.1087    1534
+    <strong>LA </strong>    0.98512    1.9702    1534
+    <strong>RHA</strong>    0.98512    1.9702    1534
+    <strong>RHF</strong>    0.98512    1.9702    1534
+    <strong>RK </strong>    0.55435    1.1087    1534
+    <strong>RA </strong>    0.98512    1.9702    1534
+
+
+Note: Joints grouped into 2 models:
+  Knee Model (LK, RK):  Same parameters
+  Leg Model (LHA, LHF, LA, RHA, RHF, RA): Same parameters
+
+================================================================================
+Computing SEA Models for 2 Representative Joints
+================================================================================
+
+================================================================================
+Joint: LK (Representative for group)
+================================================================================
+State-Space Representation for H_d(z):
+A =
+  1.72504955  -0.98146742   1.00000000   0.00000000 
+B =
+  0.50000000   0.00000000 
+C =
+  0.47758463   0.00237604 
+D =
+  0.06410447 
+State-Space Representation for Z_d(z):
+A =
+  1.72504955  -0.98146742   1.00000000   0.00000000 
+B =
+  4.00000000   0.00000000 
+C =
+  3.13127510  -3.52036494 
+D =
+  7.17831874 
+
+================================================================================
+Joint: LHA (Representative for group)
+================================================================================
+State-Space Representation for H_d(z):
+A =
+  1.83247958  -0.98093294   1.00000000   0.00000000 
+B =
+  0.50000000   0.00000000 
+C =
+  0.28447223   0.00141528 
+D =
+  0.03711334 
+State-Space Representation for Z_d(z):
+A =
+  1.83247958  -0.98093294   1.00000000   0.00000000 
+B =
+  4.00000000   0.00000000 
+C =
+  3.41993260  -3.62090506 
+D =
+  7.38534069 
+
+================================================================================
+Joint Group Mapping:
+================================================================================
+Knee joints (LK, RK) → Use model 'LK'
+Leg joints (LHA, LHF, LA, RHA, RHF, RA) → Use model 'LHA'
+
+================================================================================
+Models saved to: C:\Users\nholt\Documents\UTwente\MScThesis\exoRL\ActuatorDynamics\sea_models.mat
+================================================================================
+=== Mechanical Parameters for All Joints ===
+             <strong>jm</strong>         <strong>bm</strong>       <strong>k</strong>  
+           <strong>_______</strong>    <strong>______</strong>    <strong>____</strong>
+
+    <strong>LHA</strong>    0.98512    1.9702    1534
+    <strong>LHF</strong>    0.98512    1.9702    1534
+    <strong>LK </strong>    0.55435    1.1087    1534
+    <strong>LA </strong>    0.98512    1.9702    1534
+    <strong>RHA</strong>    0.98512    1.9702    1534
+    <strong>RHF</strong>    0.98512    1.9702    1534
+    <strong>RK </strong>    0.55435    1.1087    1534
+    <strong>RA </strong>    0.98512    1.9702    1534
+
+
+Note: Joints grouped into 2 models:
+  Knee Model (LK, RK):  Same parameters
+  Leg Model (LHA, LHF, LA, RHA, RHF, RA): Same parameters
+
+================================================================================
+Computing SEA Models for 2 Representative Joints
+================================================================================
+
+================================================================================
+Joint: LK (Representative for group)
+================================================================================
+State-Space Representation for H_d(z):
+A =
+  1.72504955  -0.98146742   1.00000000   0.00000000 
+B =
+  0.50000000   0.00000000 
+C =
+  0.47758463   0.00237604 
+D =
+  0.06410447 
+State-Space Representation for Z_d(z):
+A =
+  1.72504955  -0.98146742   1.00000000   0.00000000 
+B =
+  4.00000000   0.00000000 
+C =
+  3.13127510  -3.52036494 
+D =
+  7.17831874 
+
+================================================================================
+Joint: LHA (Representative for group)
+================================================================================
+State-Space Representation for H_d(z):
+A =
+  1.83247958  -0.98093294   1.00000000   0.00000000 
+B =
+  0.50000000   0.00000000 
+C =
+  0.28447223   0.00141528 
+D =
+  0.03711334 
+State-Space Representation for Z_d(z):
+A =
+  1.83247958  -0.98093294   1.00000000   0.00000000 
+B =
+  4.00000000   0.00000000 
+C =
+  3.41993260  -3.62090506 
+D =
+  7.38534069 
+
+================================================================================
+Joint Group Mapping:
+================================================================================
+Knee joints (LK, RK) → Use model 'LK'
+Leg joints (LHA, LHF, LA, RHA, RHF, RA) → Use model 'LHA'
+
+================================================================================
+Models saved to: C:\Users\nholt\Documents\UTwente\MScThesis\exoRL\ActuatorDynamics\sea_models.mat
+================================================================================
+=== Mechanical Parameters for All Joints ===
+             <strong>jm</strong>         <strong>bm</strong>       <strong>k</strong>  
+           <strong>_______</strong>    <strong>______</strong>    <strong>____</strong>
+
+    <strong>LHA</strong>    0.98512    1.9702    1534
+    <strong>LHF</strong>    0.98512    1.9702    1534
+    <strong>LK </strong>    0.55435    1.1087    1534
+    <strong>LA </strong>    0.98512    1.9702    1534
+    <strong>RHA</strong>    0.98512    1.9702    1534
+    <strong>RHF</strong>    0.98512    1.9702    1534
+    <strong>RK </strong>    0.55435    1.1087    1534
+    <strong>RA </strong>    0.98512    1.9702    1534
+
+
+Note: Joints grouped into 2 models:
+  Knee Model (LK, RK):  Same parameters
+  Leg Model (LHA, LHF, LA, RHA, RHF, RA): Same parameters
+
+================================================================================
+Computing SEA Models for 2 Representative Joints
+================================================================================
+
+================================================================================
+Joint: LK (Representative for group)
+================================================================================
+State-Space Representation for H_d(z):
+A =
+  1.72504955  -0.98146742   1.00000000   0.00000000 
+B =
+  0.50000000   0.00000000 
+C =
+  0.47758463   0.00237604 
+D =
+  0.06410447 
+State-Space Representation for Z_d(z):
+A =
+  1.72504955  -0.98146742   1.00000000   0.00000000 
+B =
+  4.00000000   0.00000000 
+C =
+  3.13127510  -3.52036494 
+D =
+  7.17831874 
+
+================================================================================
+Joint: LHA (Representative for group)
+================================================================================
+State-Space Representation for H_d(z):
+A =
+  1.83247958  -0.98093294   1.00000000   0.00000000 
+B =
+  0.50000000   0.00000000 
+C =
+  0.28447223   0.00141528 
+D =
+  0.03711334 
+State-Space Representation for Z_d(z):
+A =
+  1.83247958  -0.98093294   1.00000000   0.00000000 
+B =
+  4.00000000   0.00000000 
+C =
+  3.41993260  -3.62090506 
+D =
+  7.38534069 
+
+================================================================================
+Joint Group Mapping:
+================================================================================
+Knee joints (LK, RK) → Use model 'LK'
+Leg joints (LHA, LHF, LA, RHA, RHF, RA) → Use model 'LHA'
+
+================================================================================
+Models saved to: C:\Users\nholt\Documents\UTwente\MScThesis\exoRL\ActuatorDynamics\sea_models.mat
+================================================================================
+
+=== Simulation Results for Joint: LK ===
+=== Mechanical Parameters for All Joints ===
+             <strong>jm</strong>         <strong>bm</strong>       <strong>k</strong>  
+           <strong>_______</strong>    <strong>______</strong>    <strong>____</strong>
+
+    <strong>LHA</strong>    0.98512    1.9702    1534
+    <strong>LHF</strong>    0.98512    1.9702    1534
+    <strong>LK </strong>    0.55435    1.1087    1534
+    <strong>LA </strong>    0.98512    1.9702    1534
+    <strong>RHA</strong>    0.98512    1.9702    1534
+    <strong>RHF</strong>    0.98512    1.9702    1534
+    <strong>RK </strong>    0.55435    1.1087    1534
+    <strong>RA </strong>    0.98512    1.9702    1534
+
+
+Note: Joints grouped into 2 models:
+  Knee Model (LK, RK):  Same parameters
+  Leg Model (LHA, LHF, LA, RHA, RHF, RA): Same parameters
+
+================================================================================
+Computing SEA Models for 2 Representative Joints
+================================================================================
+
+================================================================================
+Joint: LK (Representative for group)
+================================================================================
+State-Space Representation for H_d(z):
+A =
+  1.99999498  -0.99999500   1.00000000   0.00000000 
+B =
+  0.00012207   0.00000000 
+C =
+  0.00014168   0.00000000 
+D =
+  0.00000000 
+State-Space Representation for Z_d(z):
+A =
+  1.99999498  -0.99999500   1.00000000   0.00000000 
+B =
+  0.06250000   0.00000000 
+C =
+  0.06136000  -0.06135969 
+D =
+  0.00191750 
+
+================================================================================
+Joint: LHA (Representative for group)
+================================================================================
+State-Space Representation for H_d(z):
+A =
+  1.99999499  -0.99999500   1.00000000   0.00000000 
+B =
+  0.00012207   0.00000000 
+C =
+  0.00007973   0.00000000 
+D =
+  0.00000000 
+State-Space Representation for Z_d(z):
+A =
+  1.99999499  -0.99999500   1.00000000   0.00000000 
+B =
+  0.06250000   0.00000000 
+C =
+  0.06136000  -0.06135969 
+D =
+  0.00191750 
+
+================================================================================
+Joint Group Mapping:
+================================================================================
+Knee joints (LK, RK) → Use model 'LK'
+Leg joints (LHA, LHF, LA, RHA, RHF, RA) → Use model 'LHA'
+
+================================================================================
+Models saved to: C:\Users\nholt\Documents\UTwente\MScThesis\exoRL\ActuatorDynamics\sea_models.mat
+================================================================================
+
+=== Simulation Results for Joint: LK ===
+=== Mechanical Parameters for All Joints ===
+             <strong>jm</strong>         <strong>bm</strong>       <strong>k</strong>  
+           <strong>_______</strong>    <strong>______</strong>    <strong>____</strong>
+
+    <strong>LHA</strong>    0.98512    1.9702    1534
+    <strong>LHF</strong>    0.98512    1.9702    1534
+    <strong>LK </strong>    0.55435    1.1087    1534
+    <strong>LA </strong>    0.98512    1.9702    1534
+    <strong>RHA</strong>    0.98512    1.9702    1534
+    <strong>RHF</strong>    0.98512    1.9702    1534
+    <strong>RK </strong>    0.55435    1.1087    1534
+    <strong>RA </strong>    0.98512    1.9702    1534
+
+
+Note: Joints grouped into 2 models:
+  Knee Model (LK, RK):  Same parameters
+  Leg Model (LHA, LHF, LA, RHA, RHF, RA): Same parameters
+
+================================================================================
+Computing SEA Models for 2 Representative Joints
+================================================================================
+
+================================================================================
+Joint: LK (Representative for group)
+================================================================================
+sea_knee_H_A = [
+        [1.999994982717496, -0.9999950000125216],
+        [1, 0],
+    ]
+sea_knee_H_B = [
+        [0.0001220703125],
+        [0],
+    ]
+sea_knee_H_C = [
+        [0.0001416806744739692, 1.771006217179028e-10],
+    ]
+sea_knee_H_D = [
+        [4.323756475438979e-09],
+    ]
+
+sea_knee_Z_A = [
+        [1.999994982717496, -0.9999950000125216],
+        [1, 0],
+    ]
+sea_knee_Z_B = [
+        [0.0625],
+        [0],
+    ]
+sea_knee_Z_C = [
+        [0.06135999920408359, -0.06135969293546331],
+    ]
+sea_knee_Z_D = [
+        [0.001917499991709197],
+    ]
+
+
+================================================================================
+Joint: LHA (Representative for group)
+================================================================================
+sea_leg_H_A = [
+        [1.999994990280219, -0.999995000012512],
+        [1, 0],
+    ]
+sea_leg_H_B = [
+        [0.0001220703125],
+        [0],
+    ]
+sea_leg_H_C = [
+        [7.972684047709131e-05, 9.965842602584619e-11],
+    ]
+sea_leg_H_D = [
+        [2.433073130172694e-09],
+    ]
+
+sea_leg_Z_A = [
+        [1.999994990280219, -0.999995000012512],
+        [1, 0],
+    ]
+sea_leg_Z_B = [
+        [0.0625],
+        [0],
+    ]
+sea_leg_Z_C = [
+        [0.06135999955212029, -0.06135969305147476],
+    ]
+sea_leg_Z_D = [
+        [0.001917499995334583],
+    ]
+
+
+================================================================================
+Joint Group Mapping:
+================================================================================
+Knee joints (LK, RK) → Use model 'LK'
+Leg joints (LHA, LHF, LA, RHA, RHF, RA) → Use model 'LHA'
+
+================================================================================
+Models saved to: C:\Users\nholt\Documents\UTwente\MScThesis\exoRL\ActuatorDynamics\sea_models.mat
+================================================================================
+
+=== Simulation Results for Joint: LK ===
+=== Mechanical Parameters for All Joints ===
+             <strong>jm</strong>         <strong>bm</strong>       <strong>k</strong>  
+           <strong>_______</strong>    <strong>______</strong>    <strong>____</strong>
+
+    <strong>LHA</strong>    0.98512    1.9702    1534
+    <strong>LHF</strong>    0.98512    1.9702    1534
+    <strong>LK </strong>    0.55435    1.1087    1534
+    <strong>LA </strong>    0.98512    1.9702    1534
+    <strong>RHA</strong>    0.98512    1.9702    1534
+    <strong>RHF</strong>    0.98512    1.9702    1534
+    <strong>RK </strong>    0.55435    1.1087    1534
+    <strong>RA </strong>    0.98512    1.9702    1534
+
+
+Note: Joints grouped into 2 models:
+  Knee Model (LK, RK):  Same parameters
+  Leg Model (LHA, LHF, LA, RHA, RHF, RA): Same parameters
+
+================================================================================
+Computing SEA Models for 2 Representative Joints
+================================================================================
+
+================================================================================
+Joint: LK (Representative for group)
+================================================================================
+sea_knee_H_A = [
+        [1.999994982717496, -0.9999950000125216],
+        [1, 0],
+    ]
+sea_knee_H_B = [
+        [0.0001220703125],
+        [0],
+    ]
+sea_knee_H_C = [
+        [0.0001416806744739692, 1.771006217179028e-10],
+    ]
+sea_knee_H_D = [
+        [4.323756475438979e-09],
+    ]
+
+sea_knee_Z_A = [
+        [1.999994982717496, -0.9999950000125216],
+        [1, 0],
+    ]
+sea_knee_Z_B = [
+        [0.0625],
+        [0],
+    ]
+sea_knee_Z_C = [
+        [0.06135999920408359, -0.06135969293546331],
+    ]
+sea_knee_Z_D = [
+        [0.001917499991709197],
+    ]
+
+
+================================================================================
+Joint: LHA (Representative for group)
+================================================================================
+sea_leg_H_A = [
+        [1.999994990280219, -0.999995000012512],
+        [1, 0],
+    ]
+sea_leg_H_B = [
+        [0.0001220703125],
+        [0],
+    ]
+sea_leg_H_C = [
+        [7.972684047709131e-05, 9.965842602584619e-11],
+    ]
+sea_leg_H_D = [
+        [2.433073130172694e-09],
+    ]
+
+sea_leg_Z_A = [
+        [1.999994990280219, -0.999995000012512],
+        [1, 0],
+    ]
+sea_leg_Z_B = [
+        [0.0625],
+        [0],
+    ]
+sea_leg_Z_C = [
+        [0.06135999955212029, -0.06135969305147476],
+    ]
+sea_leg_Z_D = [
+        [0.001917499995334583],
+    ]
+
+
+================================================================================
+Joint Group Mapping:
+================================================================================
+Knee joints (LK, RK) → Use model 'LK'
+Leg joints (LHA, LHF, LA, RHA, RHF, RA) → Use model 'LHA'
+
+================================================================================
+Models saved to: C:\Users\nholt\Documents\UTwente\MScThesis\exoRL\ActuatorDynamics\sea_models.mat
+================================================================================
+
+=== Simulation Results for Joint: LK ===
+=== Mechanical Parameters for All Joints ===
+             <strong>jm</strong>         <strong>bm</strong>       <strong>k</strong>  
+           <strong>_______</strong>    <strong>______</strong>    <strong>____</strong>
+
+    <strong>LHA</strong>    0.98512    1.9702    1534
+    <strong>LHF</strong>    0.98512    1.9702    1534
+    <strong>LK </strong>    0.55435    1.1087    1534
+    <strong>LA </strong>    0.98512    1.9702    1534
+    <strong>RHA</strong>    0.98512    1.9702    1534
+    <strong>RHF</strong>    0.98512    1.9702    1534
+    <strong>RK </strong>    0.55435    1.1087    1534
+    <strong>RA </strong>    0.98512    1.9702    1534
+
+
+Note: Joints grouped into 2 models:
+  Knee Model (LK, RK):  Same parameters
+  Leg Model (LHA, LHF, LA, RHA, RHF, RA): Same parameters
+
+================================================================================
+Computing SEA Models for 2 Representative Joints
+================================================================================
+
+================================================================================
+Joint: LK (Representative for group)
+================================================================================
+sea_knee_H_A = [
+        [1.999994982717496, -0.9999950000125216],
+        [1, 0],
+    ]
+sea_knee_H_B = [
+        [0.0001220703125],
+        [0],
+    ]
+sea_knee_H_C = [
+        [0.0001416806744739692, 1.771006217179028e-10],
+    ]
+sea_knee_H_D = [
+        [4.323756475438979e-09],
+    ]
+
+sea_knee_Z_A = [
+        [1.999994982717496, -0.9999950000125216],
+        [1, 0],
+    ]
+sea_knee_Z_B = [
+        [0.0625],
+        [0],
+    ]
+sea_knee_Z_C = [
+        [0.06135999920408359, -0.06135969293546331],
+    ]
+sea_knee_Z_D = [
+        [0.001917499991709197],
+    ]
+
+
+================================================================================
+Joint: LHA (Representative for group)
+================================================================================
+sea_leg_H_A = [
+        [1.999994990280219, -0.999995000012512],
+        [1, 0],
+    ]
+sea_leg_H_B = [
+        [0.0001220703125],
+        [0],
+    ]
+sea_leg_H_C = [
+        [7.972684047709131e-05, 9.965842602584619e-11],
+    ]
+sea_leg_H_D = [
+        [2.433073130172694e-09],
+    ]
+
+sea_leg_Z_A = [
+        [1.999994990280219, -0.999995000012512],
+        [1, 0],
+    ]
+sea_leg_Z_B = [
+        [0.0625],
+        [0],
+    ]
+sea_leg_Z_C = [
+        [0.06135999955212029, -0.06135969305147476],
+    ]
+sea_leg_Z_D = [
+        [0.001917499995334583],
+    ]
+
+
+================================================================================
+Joint Group Mapping:
+================================================================================
+Knee joints (LK, RK) → Use model 'LK'
+Leg joints (LHA, LHF, LA, RHA, RHF, RA) → Use model 'LHA'
+
+================================================================================
+Models saved to: C:\Users\nholt\Documents\UTwente\MScThesis\exoRL\ActuatorDynamics\sea_models.mat
+================================================================================
+
+=== Simulation Results for Joint: LK ===
+=== Mechanical Parameters for All Joints ===
+             <strong>jm</strong>         <strong>bm</strong>       <strong>k</strong>  
+           <strong>_______</strong>    <strong>______</strong>    <strong>____</strong>
+
+    <strong>LHA</strong>    0.98512    1.9702    1534
+    <strong>LHF</strong>    0.98512    1.9702    1534
+    <strong>LK </strong>    0.55435    1.1087    1534
+    <strong>LA </strong>    0.98512    1.9702    1534
+    <strong>RHA</strong>    0.98512    1.9702    1534
+    <strong>RHF</strong>    0.98512    1.9702    1534
+    <strong>RK </strong>    0.55435    1.1087    1534
+    <strong>RA </strong>    0.98512    1.9702    1534
+
+
+Note: Joints grouped into 2 models:
+  Knee Model (LK, RK):  Same parameters
+  Leg Model (LHA, LHF, LA, RHA, RHF, RA): Same parameters
+
+================================================================================
+Computing SEA Models for 2 Representative Joints
+================================================================================
+
+================================================================================
+Joint: LK (Representative for group)
+================================================================================
+sea_knee_H_A = [
+        [1.995240840484988, -0.9980033778908122],
+        [1, 0],
+    ]
+sea_knee_H_B = [
+        [0.0625],
+        [0],
+    ]
+sea_knee_H_C = [
+        [0.04414800906847185, 2.206297304771163e-05],
+    ]
+sea_knee_H_D = [
+        [0.0006906343514561544],
+    ]
+
+sea_knee_Z_A = [
+        [1.995240840484988, -0.9980033778908122],
+        [1, 0],
+    ]
+sea_knee_Z_B = [
+        [2],
+        [0],
+    ]
+sea_knee_Z_C = [
+        [0.7654121108600733, -0.7649394031165713],
+    ]
+sea_knee_Z_D = [
+        [0.7664702834524332],
+    ]
+
+
+================================================================================
+Joint: LHA (Representative for group)
+================================================================================
+sea_leg_H_A = [
+        [1.99644776439489, -0.9980027747304374],
+        [1, 0],
+    ]
+sea_leg_H_B = [
+        [0.03125],
+        [0],
+    ]
+sea_leg_H_C = [
+        [0.04971614063287835, 2.484564749269218e-05],
+    ]
+sea_leg_H_D = [
+        [0.0003887525838868775],
+    ]
+
+sea_leg_Z_A = [
+        [1.99644776439489, -0.9980027747304374],
+        [1, 0],
+    ]
+sea_leg_Z_B = [
+        [2],
+        [0],
+    ]
+sea_leg_Z_C = [
+        [0.7661060098952616, -0.7651702527459607],
+    ]
+sea_leg_Z_D = [
+        [0.7667018267681587],
+    ]
+
+
+================================================================================
+Joint Group Mapping:
+================================================================================
+Knee joints (LK, RK) → Use model 'LK'
+Leg joints (LHA, LHF, LA, RHA, RHF, RA) → Use model 'LHA'
+
+================================================================================
+Models saved to: C:\Users\nholt\Documents\UTwente\MScThesis\exoRL\ActuatorDynamics\sea_models.mat
+================================================================================
+
+=== Simulation Results for Joint: LK ===
+=== Mechanical Parameters for All Joints ===
+             <strong>jm</strong>         <strong>bm</strong>       <strong>k</strong>  
+           <strong>_______</strong>    <strong>______</strong>    <strong>____</strong>
+
+    <strong>LHA</strong>    0.98512    1.9702    1534
+    <strong>LHF</strong>    0.98512    1.9702    1534
+    <strong>LK </strong>    0.55435    1.1087    1534
+    <strong>LA </strong>    0.98512    1.9702    1534
+    <strong>RHA</strong>    0.98512    1.9702    1534
+    <strong>RHF</strong>    0.98512    1.9702    1534
+    <strong>RK </strong>    0.55435    1.1087    1534
+    <strong>RA </strong>    0.98512    1.9702    1534
+
+
+Note: Joints grouped into 2 models:
+  Knee Model (LK, RK):  Same parameters
+  Leg Model (LHA, LHF, LA, RHA, RHF, RA): Same parameters
+
+================================================================================
+Computing SEA Models for 2 Representative Joints
+================================================================================
+
+================================================================================
+Joint: LK (Representative for group)
+================================================================================
+sea_knee_H_A = [
+        [1.995240840484988, -0.9980033778908122],
+        [1, 0],
+    ]
+sea_knee_H_B = [
+        [0.0625],
+        [0],
+    ]
+sea_knee_H_C = [
+        [0.04414800906847185, 2.206297304771163e-05],
+    ]
+sea_knee_H_D = [
+        [0.0006906343514561544],
+    ]
+
+sea_knee_Z_A = [
+        [1.995240840484988, -0.9980033778908122],
+        [1, 0],
+    ]
+sea_knee_Z_B = [
+        [2],
+        [0],
+    ]
+sea_knee_Z_C = [
+        [0.7654121108600733, -0.7649394031165713],
+    ]
+sea_knee_Z_D = [
+        [0.7664702834524332],
+    ]
+
+
+================================================================================
+Joint: LHA (Representative for group)
+================================================================================
+sea_leg_H_A = [
+        [1.99644776439489, -0.9980027747304374],
+        [1, 0],
+    ]
+sea_leg_H_B = [
+        [0.03125],
+        [0],
+    ]
+sea_leg_H_C = [
+        [0.04971614063287835, 2.484564749269218e-05],
+    ]
+sea_leg_H_D = [
+        [0.0003887525838868775],
+    ]
+
+sea_leg_Z_A = [
+        [1.99644776439489, -0.9980027747304374],
+        [1, 0],
+    ]
+sea_leg_Z_B = [
+        [2],
+        [0],
+    ]
+sea_leg_Z_C = [
+        [0.7661060098952616, -0.7651702527459607],
+    ]
+sea_leg_Z_D = [
+        [0.7667018267681587],
+    ]
+
+
+================================================================================
+Joint Group Mapping:
+================================================================================
+Knee joints (LK, RK) → Use model 'LK'
+Leg joints (LHA, LHF, LA, RHA, RHF, RA) → Use model 'LHA'
+
+================================================================================
+Models saved to: C:\Users\nholt\Documents\UTwente\MScThesis\exoRL\ActuatorDynamics\sea_models.mat
+================================================================================
+
+=== Simulation Results for Joint: LK ===
+=== Mechanical Parameters for All Joints ===
+             <strong>jm</strong>         <strong>bm</strong>       <strong>k</strong>  
+           <strong>_______</strong>    <strong>______</strong>    <strong>____</strong>
+
+    <strong>LHA</strong>    0.98512    1.9702    1534
+    <strong>LHF</strong>    0.98512    1.9702    1534
+    <strong>LK </strong>    0.55435    1.1087    1534
+    <strong>LA </strong>    0.98512    1.9702    1534
+    <strong>RHA</strong>    0.98512    1.9702    1534
+    <strong>RHF</strong>    0.98512    1.9702    1534
+    <strong>RK </strong>    0.55435    1.1087    1534
+    <strong>RA </strong>    0.98512    1.9702    1534
+
+
+Note: Joints grouped into 2 models:
+  Knee Model (LK, RK):  Same parameters
+  Leg Model (LHA, LHF, LA, RHA, RHF, RA): Same parameters
+
+================================================================================
+Computing SEA Models for 2 Representative Joints
+================================================================================
+
+================================================================================
+Joint: LK (Representative for group)
+================================================================================
+sea_knee_H_A = [
+        [1.995240840484988, -0.9980033778908122],
+        [1, 0],
+    ]
+sea_knee_H_B = [
+        [0.0625],
+        [0],
+    ]
+sea_knee_H_C = [
+        [0.04414800906847185, 2.206297304771163e-05],
+    ]
+sea_knee_H_D = [
+        [0.0006906343514561544],
+    ]
+
+sea_knee_Z_A = [
+        [1.995240840484988, -0.9980033778908122],
+        [1, 0],
+    ]
+sea_knee_Z_B = [
+        [2],
+        [0],
+    ]
+sea_knee_Z_C = [
+        [0.7654121108600733, -0.7649394031165713],
+    ]
+sea_knee_Z_D = [
+        [0.7664702834524332],
+    ]
+
+
+================================================================================
+Joint: LHA (Representative for group)
+================================================================================
+sea_leg_H_A = [
+        [1.99644776439489, -0.9980027747304374],
+        [1, 0],
+    ]
+sea_leg_H_B = [
+        [0.03125],
+        [0],
+    ]
+sea_leg_H_C = [
+        [0.04971614063287835, 2.484564749269218e-05],
+    ]
+sea_leg_H_D = [
+        [0.0003887525838868775],
+    ]
+
+sea_leg_Z_A = [
+        [1.99644776439489, -0.9980027747304374],
+        [1, 0],
+    ]
+sea_leg_Z_B = [
+        [2],
+        [0],
+    ]
+sea_leg_Z_C = [
+        [0.7661060098952616, -0.7651702527459607],
+    ]
+sea_leg_Z_D = [
+        [0.7667018267681587],
+    ]
+
+
+================================================================================
+Joint Group Mapping:
+================================================================================
+Knee joints (LK, RK) → Use model 'LK'
+Leg joints (LHA, LHF, LA, RHA, RHF, RA) → Use model 'LHA'
+
+================================================================================
+Models saved to: C:\Users\nholt\Documents\UTwente\MScThesis\exoRL\ActuatorDynamics\sea_models.mat
+================================================================================
+
+=== Simulation Results for Joint: LK ===
