@@ -14,8 +14,11 @@ we2-hardware-files/
 *.stl
 *.usd
 *.usda
-ActuatorDynamics/load_joint_parameters.m
+misc/ActuatorDynamics/load_joint_parameters.m
 __pycache__/
 *.egg-info/
 # Third-party gait dataset (Camargo et al. 2021), not redistributed
-humanMotion/AB08/
+misc/humanMotion/AB08/
+
+# training and test logs
+*.log

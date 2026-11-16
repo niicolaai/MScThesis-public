@@ -34,7 +34,8 @@ SCRIPTS_DIR="${WORKSPACE_ROOT}/scripts/rsl_rl"
 
 # Log file configuration
 LOG_TIMESTAMP=$(date +%Y-%m-%d_%H-%M-%S)
-LOG_FILE="${WORKSPACE_ROOT}/incremental_training_${LOG_TIMESTAMP}.log"
+mkdir -p "${WORKSPACE_ROOT}/logs"
+LOG_FILE="${WORKSPACE_ROOT}/logs/incremental_training_${LOG_TIMESTAMP}.log"
 
 # ============================================================================
 # Helper Functions
